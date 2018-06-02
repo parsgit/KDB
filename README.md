@@ -35,7 +35,7 @@
         createTableQuery.Table("users")
                 .Column("id").INTEGER().KEY_AUTO().Add()
                 .Column("name").TEXT().Add()
-                .Column("username").TEXT().TEXT().NULL_ABLE(false).Add()
+                .Column("username").TEXT().NULL_ABLE(false).Add()
                 .Column("age").INTEGER().DEFAULT(0).Add()
                 .Build();
 ```
