@@ -19,7 +19,7 @@
 	dependencies {
           ...
          implementation 'com.google.code.gson:gson:2.2.4'
-         implementation 'com.github.parsgit:KDB:1.0.0'
+         implementation 'com.github.parsgit:KDB:1.0.1'
 	}
 ```
 
