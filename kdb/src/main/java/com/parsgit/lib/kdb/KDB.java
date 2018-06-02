@@ -3,8 +3,6 @@ package com.parsgit.lib.kdb;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -23,7 +21,7 @@ import java.util.regex.Pattern;
  * Created by benyamin on 6/1/18.
  *
  * @author Benyamin Khaife
- * @version 1.0
+ * @version 1.0.0
  *
  *
  */
@@ -37,10 +35,6 @@ public class KDB {
     public static class CreateTableQuery{
         ArrayList<String> params;
         String Query="",ColumnName;
-
-        private void Log(String msg){
-            Log.i("KDB",msg);
-        }
 
         public Column Table(String name){
             params=new ArrayList<>();
@@ -57,7 +51,6 @@ public class KDB {
             public void Build(){
                 Query+= StringUtils.implode(params,",");
                 Query+=" )";
-                Log("Build : "+ Query);
                 KDB.query(Query).exec();
             }
         }
