@@ -27,12 +27,12 @@
 
 
 ### init DB and create database
-``` 
+```java 
         KDB.init(MainActivity.this,"db_name");
 ```
 
 ### create table 
-```
+```java
         KDB.CreateTableQuery createTableQuery=new KDB.CreateTableQuery();
         createTableQuery.Table("users")
                 .Column("id").INTEGER().KEY_AUTO().Add()
@@ -42,7 +42,7 @@
                 .Build();
 ```
 ### insert data type 1 
-```
+```java
         JsonObject values=new JsonObject();
         values.addProperty("name","benjamin");
         values.addProperty("username","parsgit");
@@ -53,7 +53,7 @@
 ```
 
 ### insert data type 2
-```
+```java
         ArrayList<String> params=new ArrayList<>();
         params.add("myname-test");
         params.add("abcd");
@@ -63,7 +63,7 @@
 ```
 
 ### select and get JsonArray data
-```
+```java
         JsonArray array=KDB.query("select * from users").getJsonArray();
 
         Log.i("KDB",array.toString());
