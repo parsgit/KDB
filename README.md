@@ -1,5 +1,7 @@
 [![](https://jitpack.io/v/parsgit/KDB.svg)](https://jitpack.io/#parsgit/KDB)
 
+**KDB is an Android library for using the database**
+
 ### Install KDB
 
 1. **Add the JitPack repository to your build file**
